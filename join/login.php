@@ -9,7 +9,7 @@ include_once "koneksi.php";
 if (isset($_POST["login"])) {
     $user = mysqli_real_escape_string($koneksi, $_POST['username']);
     $pass = mysqli_real_escape_string($koneksi, $_POST['password']);
-    $queryuser = mysqli_query ($koneksi, "SELECT * FROM login where username='$user'");
+    $queryuser = mysqli_query ($koneksi, "SELECT * FROM registrasi where username='$user'");
     $cariuser = mysqli_fetch_assoc($queryuser); 
     if ($pass === $cariuser['password']) {
         $_SESSION['userid'] = $cariuser['id'];  
