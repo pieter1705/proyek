@@ -9,9 +9,9 @@ include_once "koneksi.php";
 if (isset($_POST["login"])) {
     $user = mysqli_real_escape_string($koneksi, $_POST['username']);
     $pass = mysqli_real_escape_string($koneksi, $_POST['password']);
-    $queryuser = mysqli_query($koneksi, "SELECT * FROM registrasi where username='$user'");
-    $cariuser = mysqli_fetch_assoc($queryuser);
-    if (password_verify($pass, $cariuser['password'])) {
+    $queryuser = mysqli_query ($koneksi, "SELECT * FROM login where username='$user'");
+    $cariuser = mysqli_fetch_assoc($queryuser); 
+    if ($pass === $cariuser['password']) {
         $_SESSION['userid'] = $cariuser['id'];  
         $_SESSION['username'] = $cariuser['username'];
         $_SESSION['log'] = 'login';
@@ -19,7 +19,8 @@ if (isset($_POST["login"])) {
         if ($cariuser) {
             echo '<script>alert("anda berhasil login sebagai '.$cariuser['username'].'");windows.location="../website/web.php"</script>';
             header('location:../job/admin/index.php');
-        } else {
+        } 
+        else {
             echo '<script>alert("Data yang anda masukan salah !!");history.go(-1);</script>';         
     } 
     }else {
@@ -88,7 +89,7 @@ if (isset($_POST["login"])) {
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" id="remember-me" />
                   <label class="form-check-label" for="remember-me"> Remember Me </label>
-                  <!-- <p>belum mempunyai akun?<a href="../regis/index.php" type="ctn">sign up</a></p> -->
+                  <p>belum mempunyai akun?<a href="../regis/index.php" type="ctn">sign up</a></p>
                 </div>
               </div>
               <div class="mb-3">

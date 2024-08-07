@@ -65,7 +65,7 @@ require 'dbconnect.php';
 									</a>
 									<div class="blog-title">
 										<h4><?php echo $row["requirement"]; ?></h4>
-										<a href="apply.php" type="button" class="btn btn-primary"><font color="white">Apply</font></a>
+									<a href="apply.php" type="button" class="btn btn-primary"><font color="white">Apply</font></a>
 									</div>
 								</div>
 								<h4 align="center" style="font-family:verdana"><?php echo $row["jobname"]; ?></h4>

@@ -3,9 +3,7 @@
 	date_default_timezone_set("Asia/Bangkok");
 	$date_now = date("Y-m-d");
 	include '../dbconnect.php';
-	// if($_SESSION['log']!="Logged"){
-	// 	header("location:login.php");
-	// }
+	
 	
 	if (isset($_POST["submit"])) {
 		$jobname=$_POST['jobname'];
@@ -264,6 +262,10 @@
 																				<label>Kualifikasi</label>
 																				<input name="editreq" type="text" class="form-control" value="<?php echo $p['requirement'] ?>">
 																			</div>
+																			<!-- <div class="form-group">
+																				<label>Kualifikasi</label>
+																				<input name="editreq" type="text" class="form-control" value="<?php echo $p['requirement'] ?>">
+																			</div> -->
 																			<div class="form-group">
 																				<label>Tanggal berakhir</label>
 																				<input name="editdate" type="date" class="form-control" value="<?php echo $date2 ?>">
@@ -395,6 +397,10 @@
 																				<label>Kualifikasi</label>
 																				<input name="editreq" type="text" class="form-control" value="<?php echo $p['requirement'] ?>">
 																			</div>
+																			<!-- <div class="form-group">
+																				<label>Kualifikasi</label>
+																				<input name="editreq" type="text" class="form-control" value="<?php echo $p['requirement'] ?>">
+																			</div> -->
 																			<div class="form-group">
 																				<label>Tanggal berakhir</label>
 																				<input name="editdate" type="date" class="form-control" value="<?php echo $date2 ?>">
@@ -497,12 +503,16 @@
 								<div class="form-group">
 									<label>Kualifikasi</label>
 									<input name="requirement" type="text" class="form-control" placeholder="Kualifikasi">
+									<!-- <input name="requirement" type="text" class="form-control" placeholder="Kualifikasi">
 									<input name="requirement" type="text" class="form-control" placeholder="Kualifikasi">
 									<input name="requirement" type="text" class="form-control" placeholder="Kualifikasi">
-									<input name="requirement" type="text" class="form-control" placeholder="Kualifikasi">
-									<input name="requirement" type="text" class="form-control" placeholder="Kualifikasi">
+									<input name="requirement" type="text" class="form-control" placeholder="Kualifikasi"> -->
 								</div>
 								<div class="form-group">
+									<label>Kualifikasi</label>
+									<input name="requirement" type="text" class="form-control" placeholder="Kualifikasi">
+									</div>
+									<div class="form-group">
 									<label>Tanggal berakhir</label>
 									<input name="close_date" type="date" class="form-control">
 								</div>

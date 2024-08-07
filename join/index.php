@@ -1,9 +1,9 @@
-<!-- <?php
+<!-- <?php 
 session_start();
 include_once "koneksi.php";
 if ($_SESSION['log'] != "login") {
   header('location:login.php')
-};
+}
 ?>
 
 <!DOCTYPE html>
@@ -40,4 +40,4 @@ if ($_SESSION['log'] != "login") {
   </p>
 </body>
 
-</html> -->
+</html>  -->
